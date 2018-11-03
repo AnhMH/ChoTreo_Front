@@ -109,8 +109,10 @@ class AppController extends Controller
         if (isset($this->Auth) && $this->isAuthorized()) {
             $this->set('AppUI', $this->Auth->user());
         }
+        $settings = $this->getSettings();
         
         // Set common param
+        $this->set('settings', $settings);
         $this->set('controller', $this->controller);
         $this->set('action', $this->action);
         $this->set('current_url', $this->current_url);
@@ -376,5 +378,16 @@ class AppController extends Controller
             }
         }
         return $result;
+    }
+    
+    /**
+     * Get settings data
+     * 
+     * @param array
+     * @return array
+     */
+    function getSettings() {
+        $data = Api::call(Configure::read('API.url_settings_getfrontdata'), array());
+        return $data;
     }
 }

@@ -1,8 +1,8 @@
 <?php
+use Cake\Core\Configure;
+use App\Lib\Api;
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+$data = Api::call(Configure::read('API.url_settings_gethomedata'), array());
+$this->set(compact(
+    'data'
+));
