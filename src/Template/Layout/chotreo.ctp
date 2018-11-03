@@ -9,11 +9,11 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/skdslider.css" rel="stylesheet">
-<link href="css/style.css?<?php echo VERSION_DATE;?>" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo $BASE_URL;?>/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo $BASE_URL;?>/css/skdslider.css" rel="stylesheet">
+<link href="<?php echo $BASE_URL;?>/css/style.css?<?php echo VERSION_DATE;?>" rel="stylesheet" type="text/css" media="all" />
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="<?php echo $BASE_URL;?>/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 
 <link href='//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -29,10 +29,10 @@
 <?php echo $this->element('footer'); ?>
     
 <!-- Bootstrap Core JavaScript -->
-<script src="js/jquery-1.11.1.min.js"></script>
+<script src="<?php echo $BASE_URL;?>/js/jquery-1.11.1.min.js"></script>
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="<?php echo $BASE_URL;?>/js/move-top.js"></script>
+<script type="text/javascript" src="<?php echo $BASE_URL;?>/js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -42,7 +42,7 @@
 	});
 </script>
 <!-- start-smoth-scrolling -->
-<script src="js/bootstrap.min.js"></script>
+<script src="<?php echo $BASE_URL;?>/js/bootstrap.min.js"></script>
 
 <!-- top-header and slider -->
 <!-- here stars scrolling icon -->
@@ -62,7 +62,7 @@
 			});
 	</script>
 <!-- //here ends scrolling icon -->
-<script src="js/minicart.min.js"></script>
+<script src="<?php echo $BASE_URL;?>/js/minicart.min.js"></script>
 <script>
 	// Mini Cart
 	paypal.minicart.render({
@@ -74,7 +74,7 @@
 	}
 </script>
 <!-- main slider-banner -->
-<script src="js/skdslider.min.js"></script>
+<script src="<?php echo $BASE_URL;?>/js/skdslider.min.js"></script>
 
 <script type="text/javascript">
 		jQuery(document).ready(function(){

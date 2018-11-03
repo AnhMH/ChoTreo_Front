@@ -10,3 +10,5 @@ Configure::write('API.secretKey', 'chotreolethuy');
 
 Configure::write('API.url_settings_getfrontdata', 'settings/getfrontdata');
 Configure::write('API.url_settings_gethomedata', 'settings/gethomedata');
+
+Configure::write('API.url_products_getdetailforfront', 'products/getdetailforfront');

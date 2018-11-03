@@ -2,13 +2,13 @@
 <div class="hover14 column">
     <div class="agile_top_brand_left_grid">
         <div class="agile_top_brand_left_grid_pos">
-            <img src="images/offer.png" alt=" " class="img-responsive" />
+            <img src="<?php echo $BASE_URL;?>/images/offer.png" alt=" " class="img-responsive" />
         </div>
         <div class="agile_top_brand_left_grid1">
             <figure>
                 <div class="snipcart-item block" >
                     <div class="snipcart-thumb">
-                        <a href="products.html">
+                        <a href="<?php echo $BASE_URL.'/san-pham/'.$p['url'];?>">
                             <img title=" " alt=" " src="<?php echo $p['image']; ?>" width="150px" height="150px"/>
                         </a>		
                         <p><?php echo $p['name']; ?></p>

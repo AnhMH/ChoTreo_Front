@@ -53,6 +53,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
+    $routes->connect('san-pham/*', ['controller' => 'Products', 'action' => 'detail']);
 
     /**
      * Connect catchall routes for all controllers.
