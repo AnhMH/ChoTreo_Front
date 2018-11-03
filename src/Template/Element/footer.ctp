@@ -2,41 +2,39 @@
     <div class="container">
         <div class="w3_footer_grids">
             <div class="col-md-3 w3_footer_grid">
-                <h3>Contact</h3>
-
+                <h3>Liên hệ</h3>
                 <ul class="address">
-                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
-                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>54 Quang Trung, Tăng Nhơn Phú B, Q.9, HCM.</li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:contact@chotreo.com">contact@chotreo.com</a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>0968677633</li>
                 </ul>
             </div>
             <div class="col-md-3 w3_footer_grid">
-                <h3>Information</h3>
+                <h3>Thông tin</h3>
                 <ul class="info"> 
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="about.html">About Us</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Contact Us</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="short-codes.html">Short Codes</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Liên hệ</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="faq.html">FAQ's</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Special Products</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="https://app.chotreo.com/login">Bán hàng cùng ChoTreo</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Săn hàng khuyến mãi</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="https://hoanganhonline.com">Liên hệ làm web</a></li>
                 </ul>
             </div>
             <div class="col-md-3 w3_footer_grid">
-                <h3>Category</h3>
+                <h3>Danh mục</h3>
                 <ul class="info"> 
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="groceries.html">Groceries</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="household.html">Household</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="personalcare.html">Personal Care</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="packagedfoods.html">Packaged Foods</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="beverages.html">Beverages</a></li>
+                    <?php if (!empty($settings['cates'])): ?>
+                    <?php foreach ($settings['cates'] as $val): ?>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL.'/danh-muc/'.$val['url'];?>"><?php echo $val['name']; ?></a></li>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="col-md-3 w3_footer_grid">
-                <h3>Profile</h3>
+                <h3>Tài khoản</h3>
                 <ul class="info"> 
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Store</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">My Cart</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="login.html">Login</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="registered.html">Create Account</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">Giỏ hàng</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="login.html">Đăng nhập</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="registered.html">Đăng ký</a></li>
                 </ul>
             </div>
             <div class="clearfix"> </div>
@@ -46,7 +44,7 @@
     <div class="footer-copy">
 
         <div class="container">
-            <p>© 2017 Super Market. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+            <p>Copyright © 2018 <a href="https://hoanganhonline.com">HoangAnhOnline.Com</a>. All rights reserved</p>
         </div>
     </div>
 
