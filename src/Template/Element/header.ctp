@@ -34,8 +34,8 @@
             <h1><a href="<?php echo $BASE_URL;?>">Chotreo.com</a></h1>
         </div>
         <div class="w3l_search">
-            <form action="#" method="post">
-                <input type="search" name="Search" placeholder="Nhập tên sản phẩm cần tìm..." required="">
+            <form action="<?php echo $BASE_URL;?>/tim-kiem" method="get">
+                <input type="search" name="keyword" placeholder="Nhập tên sản phẩm cần tìm..." required="required">
                 <button type="submit" class="btn btn-default search" aria-label="Left Align">
                     <i class="fa fa-search" aria-hidden="true"> </i>
                 </button>

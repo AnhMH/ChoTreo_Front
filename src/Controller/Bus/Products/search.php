@@ -10,21 +10,17 @@ $param = $this->getParams(array(
     'limit' => $limit,
     'disable' => 0
 ));
-if (!empty($url)) {
-    $param['url'] = $url;
-    $data = Api::call(Configure::read('API.url_cates_getdetailforfront'), $param);
+if (!empty($param['keyword'])) {
+    $data = Api::call(Configure::read('API.url_products_list'), $param);
 }
-$total = !empty($data['products']['total']) ? $data['products']['total'] : 0;
-$products = !empty($data['products']['data']) ? $data['products']['data'] : array();
-$cate = !empty($data['cate']) ? $data['cate'] : array();
+$total = !empty($data['total']) ? $data['total'] : 0;
+$products = !empty($data['data']) ? $data['data'] : array();
 unset($param['disable']);
-unset($param['url']);
 $this->set(compact(
         'data',
         'limit',
         'total',
         'products',
-        'cate',
         'sortBy',
         'limitData',
         'param',

@@ -216,13 +216,11 @@ Type::build('timestamp')
 include_once ('apiurl.php');
 
 Configure::write('default_avatar', 'avatar_default.png');
-Configure::write('Config.PageSize', 10);
+Configure::write('Config.PageSize', 8);
 Configure::write('Config.searchPageSize', array(
-    10 => 10,
-    20 => 20,
-    50 => 50,
-    80 => 80,
-    100 => 100,
+    8 => 'Hiển thị 8 sản phẩm',
+    16 => 'Hiển thị 16 sản phẩm',
+    32 => 'Hiển thị 32 sản phẩm',
 ));
 Configure::write('Config.searchStatus', array(
     0 => __('LABEL_ACTIVE'),
@@ -231,6 +229,14 @@ Configure::write('Config.searchStatus', array(
 Configure::write('Config.orderStatus', array(
     0 => 'Khởi tạo',
     1 => 'Hoàn thành',
+));
+Configure::write('Config.sortBy', array(
+    0 => 'Sắp xếp mặc định',
+    'sell_price-asc' => 'Giá thấp đến cao',
+    'sell_price-desc' => 'Giá cao đến thấp',
+    'is_feature-desc' => 'Phổ biến',
+    'is_hot-desc' => 'Bán chạy',
+    'is_new-desc' => 'Mới nhất',
 ));
 
 if ($env == 'production') {
