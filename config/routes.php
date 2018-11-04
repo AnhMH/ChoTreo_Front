@@ -54,6 +54,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
     $routes->connect('san-pham/*', ['controller' => 'Products', 'action' => 'detail']);
+    $routes->connect('danh-muc/*', ['controller' => 'Cates', 'action' => 'detail']);
 
     /**
      * Connect catchall routes for all controllers.

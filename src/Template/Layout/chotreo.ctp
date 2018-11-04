@@ -15,8 +15,6 @@
 <!-- font-awesome icons -->
 <link href="<?php echo $BASE_URL;?>/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
-
-<link href='//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
 </head>
@@ -27,7 +25,14 @@
 
 <?= $this->fetch('content') ?>
 <?php echo $this->element('footer'); ?>
-    
+
+<script type="text/javascript">
+    var BASE_URL = '<?php echo $BASE_URL;?>';
+    var controller = '<?php echo $controller; ?>';
+    var action = '<?php echo $action; ?>';
+    var currentUrl = '<?php echo $current_url; ?>';
+    var referer = '<?php echo $referer;?>';
+</script>
 <!-- Bootstrap Core JavaScript -->
 <script src="<?php echo $BASE_URL;?>/js/jquery-1.11.1.min.js"></script>
 <!-- start-smoth-scrolling -->
@@ -87,5 +92,6 @@
 		});
 </script>	
 <!-- //main slider-banner --> 
+<script src="<?php echo $BASE_URL;?>/js/common.js?<?php echo VERSION_DATE;?>"></script>
 </body>
 </html>
