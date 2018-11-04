@@ -6,9 +6,9 @@
         </div>
         <div class="agile-login">
             <ul>
-                <li><a href="registered.html"> Đăng ký </a></li>
-                <li><a href="login.html">Đăng nhập</a></li>
-                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="<?php echo $BASE_URL;?>/dang-ky"> Đăng ký </a></li>
+                <li><a href="<?php echo $BASE_URL;?>/dang-nhap">Đăng nhập</a></li>
+                <li><a href="<?php echo $BASE_URL;?>/lien-he">Liên hệ</a></li>
 
             </ul>
         </div>

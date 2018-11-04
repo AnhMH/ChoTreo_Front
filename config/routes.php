@@ -53,9 +53,10 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
-    $routes->connect('san-pham/*', ['controller' => 'Products', 'action' => 'detail']);
-    $routes->connect('danh-muc/*', ['controller' => 'Cates', 'action' => 'detail']);
-    $routes->connect('tim-kiem/*', ['controller' => 'Products', 'action' => 'search']);
+    $routes->connect('/san-pham/*', ['controller' => 'Products', 'action' => 'detail']);
+    $routes->connect('/danh-muc/*', ['controller' => 'Cates', 'action' => 'detail']);
+    $routes->connect('/tim-kiem/*', ['controller' => 'Products', 'action' => 'search']);
+    $routes->connect('/lien-he', ['controller' => 'Contact', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.

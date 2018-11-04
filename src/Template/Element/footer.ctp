@@ -12,10 +12,9 @@
             <div class="col-md-3 w3_footer_grid">
                 <h3>Thông tin</h3>
                 <ul class="info"> 
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Liên hệ</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="faq.html">FAQ's</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL;?>/lien-he">Liên hệ</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="https://app.chotreo.com/login">Bán hàng cùng ChoTreo</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Săn hàng khuyến mãi</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL;?>/hang-khuyen-mai">Săn hàng khuyến mãi</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="https://hoanganhonline.com">Liên hệ làm web</a></li>
                 </ul>
             </div>
@@ -32,9 +31,10 @@
             <div class="col-md-3 w3_footer_grid">
                 <h3>Tài khoản</h3>
                 <ul class="info"> 
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">Giỏ hàng</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="login.html">Đăng nhập</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="registered.html">Đăng ký</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL;?>/gio-hang">Giỏ hàng</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL;?>/dang-nhap">Đăng nhập</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL;?>/dang-ky">Đăng ký</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL;?>/hang-khuyen-mai">Khuyến mãi</a></li>
                 </ul>
             </div>
             <div class="clearfix"> </div>

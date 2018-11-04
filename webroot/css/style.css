@@ -3401,3 +3401,14 @@ td.invert-image a img {
     display: block;
     margin-bottom: 40px;
 }
+.message {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+}
+.message.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}

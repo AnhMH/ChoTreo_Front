@@ -22,7 +22,6 @@
 <body>
 <?php echo $this->element('header'); ?>
 <?php echo $this->element('nav'); ?>
-
 <?= $this->fetch('content') ?>
 <?php echo $this->element('footer'); ?>
 
@@ -38,60 +37,9 @@
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="<?php echo $BASE_URL;?>/js/move-top.js"></script>
 <script type="text/javascript" src="<?php echo $BASE_URL;?>/js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
 <!-- start-smoth-scrolling -->
 <script src="<?php echo $BASE_URL;?>/js/bootstrap.min.js"></script>
-
-<!-- top-header and slider -->
-<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-<!-- //here ends scrolling icon -->
-<script src="<?php echo $BASE_URL;?>/js/minicart.min.js"></script>
-<script>
-	// Mini Cart
-	paypal.minicart.render({
-		action: '#'
-	});
-
-	if (~window.location.search.indexOf('reset=true')) {
-		paypal.minicart.reset();
-	}
-</script>
-<!-- main slider-banner -->
 <script src="<?php echo $BASE_URL;?>/js/skdslider.min.js"></script>
-
-<script type="text/javascript">
-		jQuery(document).ready(function(){
-			jQuery('#demo1').skdslider({'delay':5000, 'animationSpeed': 2000,'showNextPrev':true,'showPlayButton':true,'autoSlide':true,'animationType':'fading'});
-						
-			jQuery('#responsive').change(function(){
-			  $('#responsive_wrapper').width(jQuery(this).val());
-			});
-			
-		});
-</script>	
-<!-- //main slider-banner --> 
 <script src="<?php echo $BASE_URL;?>/js/common.js?<?php echo VERSION_DATE;?>"></script>
 </body>
 </html>
