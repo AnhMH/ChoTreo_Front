@@ -6,8 +6,18 @@
         </div>
         <div class="agile-login">
             <ul>
+                <?php if (!empty($AppUI)): ?>
+                <li class="dropdown user-profile">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="hello"></span><?php echo $AppUI['name'];?><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?php echo $BASE_URL;?>"><i class="fa fa-user"></i> Tài khoản</a></li>
+                        <li><a href="<?php echo $BASE_URL;?>/dang-xuat"><i class="fa fa-power-off"></i> Đăng xuất</a></li>
+                    </ul>
+                </li>
+                <?php else: ?>
                 <li><a href="<?php echo $BASE_URL;?>/dang-ky"> Đăng ký </a></li>
                 <li><a href="<?php echo $BASE_URL;?>/dang-nhap">Đăng nhập</a></li>
+                <?php endif; ?>
                 <li><a href="<?php echo $BASE_URL;?>/lien-he">Liên hệ</a></li>
 
             </ul>

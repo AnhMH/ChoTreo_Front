@@ -141,6 +141,9 @@ button.btn.btn-default.search:hover {
     color: #fff;
     text-decoration: none;
 }
+.agile-login ul.dropdown-menu li a {
+    color: #262626;
+}
 .w3l_search input[type="search"] {
 	margin-top:0px;
 }
