@@ -14,7 +14,7 @@
  */
 namespace App\Controller;
 
-use Cake\Core\Configure;
+use Cake\Event\Event;
 
 /**
  * Static content controller
@@ -25,6 +25,15 @@ use Cake\Core\Configure;
  */
 class HomeController extends AppController
 {
+    /**
+     * Before filter event
+     * @param Event $event
+     */
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->Auth->allow();
+    }
+    
     public function index() {
         include ('Bus/Home/index.php');
     }

@@ -17,3 +17,5 @@ Configure::write('API.url_products_list', 'products/list');
 Configure::write('API.url_cates_getdetailforfront', 'cates/getdetailforfront');
 
 Configure::write('API.url_contact_addupdate', 'contact/addupdate');
+
+Configure::write('API.url_customers_login', 'customers/login');
