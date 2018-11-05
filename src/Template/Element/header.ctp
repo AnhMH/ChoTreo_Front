@@ -22,12 +22,15 @@
 
             </ul>
         </div>
-        <div class="product_list_header">  
-            <form action="#" method="post" class="last"> 
-                <input type="hidden" name="cmd" value="_cart">
-                <input type="hidden" name="display" value="1">
-                <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-            </form>  
+        <div class="product_list_header">
+            <button class="w3view-cart" onclick="window.location.href = '<?php echo $BASE_URL;?>/gio-hang';">
+                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                <?php if (!empty($cart['total'])): ?>
+                <span class="cart-num" id="topCartNumber" style="display: block"><?php echo $cart['total'];?></span>
+                <?php else: ?>
+                <span class="cart-num" id="topCartNumber"></span>
+                <?php endif; ?>
+            </button>
         </div>
         <div class="clearfix"> </div>
     </div>

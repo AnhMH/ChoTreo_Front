@@ -31,6 +31,7 @@
     var action = '<?php echo $action; ?>';
     var currentUrl = '<?php echo $current_url; ?>';
     var referer = '<?php echo $referer;?>';
+    var _csrfToken = '<?php echo $this->request->getParam('_csrfToken');?>';
 </script>
 <!-- Bootstrap Core JavaScript -->
 <script src="<?php echo $BASE_URL;?>/js/jquery-1.11.1.min.js"></script>

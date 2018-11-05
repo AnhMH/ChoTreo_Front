@@ -60,6 +60,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/dang-nhap', ['controller' => 'Customers', 'action' => 'login']);
     $routes->connect('/dang-ky', ['controller' => 'Customers', 'action' => 'register']);
     $routes->connect('/dang-xuat', ['controller' => 'Customers', 'action' => 'logout']);
+    $routes->connect('/gio-hang', ['controller' => 'Cart', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.

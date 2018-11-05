@@ -45,21 +45,9 @@
                     <div class="snipcart-thumb agileinfo_single_right_snipcart">
                         <h4 class="m-sing"><?php echo number_format($data['product']['sell_price']); ?></h4>
                     </div>
+                    <input type="number" id="inputCartNumber" value="1" min="1"/>
                     <div class="snipcart-details agileinfo_single_right_details">
-                        <form action="#" method="post">
-                            <fieldset>
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="business" value=" ">
-                                <input type="hidden" name="item_name" value="pulao basmati rice">
-                                <input type="hidden" name="amount" value="21.00">
-                                <input type="hidden" name="discount_amount" value="1.00">
-                                <input type="hidden" name="currency_code" value="USD">
-                                <input type="hidden" name="return" value=" ">
-                                <input type="hidden" name="cancel_return" value=" ">
-                                <input type="submit" name="submit" value="Add to cart" class="button">
-                            </fieldset>
-                        </form>
+                        <button class="button" onclick="return addToCart(<?php echo $data['product']['id'];?>, document.getElementById('inputCartNumber').value)">Thêm vào giỏ hàng</button>
                     </div>
                 </div>
             </div>

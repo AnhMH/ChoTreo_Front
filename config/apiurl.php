@@ -13,6 +13,7 @@ Configure::write('API.url_settings_gethomedata', 'settings/gethomedata');
 
 Configure::write('API.url_products_getdetailforfront', 'products/getdetailforfront');
 Configure::write('API.url_products_list', 'products/list');
+Configure::write('API.url_products_detail', 'products/detail');
 
 Configure::write('API.url_cates_getdetailforfront', 'cates/getdetailforfront');
 

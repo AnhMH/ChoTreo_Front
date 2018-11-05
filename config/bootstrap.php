@@ -215,6 +215,7 @@ Type::build('timestamp')
  */
 include_once ('apiurl.php');
 
+Configure::write('Config.CookieExpires', 60*60);
 Configure::write('default_avatar', 'avatar_default.png');
 Configure::write('Config.PageSize', 8);
 Configure::write('Config.searchPageSize', array(
@@ -230,6 +231,7 @@ Configure::write('Config.orderStatus', array(
     0 => 'Khởi tạo',
     1 => 'Hoàn thành',
 ));
+Configure::write('Config.cartSessionKey', 'ChoTreo.Com.CartSessionKey');
 Configure::write('Config.sortBy', array(
     0 => 'Sắp xếp mặc định',
     'sell_price-asc' => 'Giá thấp đến cao',

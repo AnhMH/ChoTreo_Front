@@ -22,20 +22,7 @@
                         <h4><?php echo number_format($p['sell_price']); ?></h4>
                     </div>
                     <div class="snipcart-details top_brand_home_details">
-                        <form action="#" method="post">
-                            <fieldset>
-                                <input type="hidden" name="cmd" value="_cart" />
-                                <input type="hidden" name="add" value="1" />
-                                <input type="hidden" name="business" value=" " />
-                                <input type="hidden" name="item_name" value="<?php echo $p['name']; ?>" />
-                                <input type="hidden" name="amount" value="<?php echo number_format($p['sell_price']); ?>" />
-                                <input type="hidden" name="discount_amount" value="0" />
-                                <input type="hidden" name="currency_code" value="VND" />
-                                <input type="hidden" name="return" value=" " />
-                                <input type="hidden" name="cancel_return" value=" " />
-                                <input type="submit" name="submit" value="Add to cart" class="button" />
-                            </fieldset>
-                        </form>
+                        <button class="button" onclick="return addToCart(<?php echo $p['id'];?>)">Thêm vào giỏ hàng</button>
                     </div>
                 </div>
             </figure>

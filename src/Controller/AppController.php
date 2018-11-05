@@ -120,8 +120,15 @@ class AppController extends Controller
             $this->set('AppUI', $this->Auth->user());
         }
         $settings = $this->getSettings();
+        $session = $session = $this->getRequest()->getSession();
+        $cart = array();
+        $sessionKey = Configure::read('Config.cartSessionKey');
+        if ($session->check($sessionKey)) {
+            $cart = $session->read($sessionKey);
+        }
         
         // Set common param
+        $this->set('cart', $cart);
         $this->set('settings', $settings);
         $this->set('controller', $this->controller);
         $this->set('action', $this->action);
