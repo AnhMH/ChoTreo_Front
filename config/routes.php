@@ -59,6 +59,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/lien-he', ['controller' => 'Contact', 'action' => 'index']);
     $routes->connect('/dang-nhap', ['controller' => 'Customers', 'action' => 'login']);
     $routes->connect('/dang-ky', ['controller' => 'Customers', 'action' => 'register']);
+    $routes->connect('/dang-xuat', ['controller' => 'Customers', 'action' => 'logout']);
 
     /**
      * Connect catchall routes for all controllers.
