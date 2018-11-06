@@ -23,3 +23,5 @@ Configure::write('API.url_customers_login', 'customers/login');
 Configure::write('API.url_customers_addupdate', 'customers/addupdate');
 
 Configure::write('API.url_orders_addupdate', 'orders/addupdate');
+
+Configure::write('API.url_admins_getdetailforfront', 'admins/getdetailforfront');

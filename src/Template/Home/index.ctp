@@ -51,7 +51,7 @@
                         <div class="agile_top_brands_grids">
                             <?php if (!empty($data['shops'])): ?>
                             <?php foreach ($data['shops'] as $v): ?>
-                            <div class="col-md-4 top_brand_left">
+                            <div class="col-md-4 top_brand_left" style="margin-bottom:40px;">
                                 <div class="hover14 column">
                                     <div class="agile_top_brand_left_grid">
                                         <div class="agile_top_brand_left_grid_pos">
