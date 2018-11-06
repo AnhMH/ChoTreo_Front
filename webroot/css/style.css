@@ -3469,3 +3469,14 @@ td.invert-image a img {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+#cartCheckoutForm label {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+#cartCheckoutForm input.form-control {
+    padding: 20px;
+}
+.cartCheckoutFormSubmit {
+    padding: 10px 30px;
+    font-size: 20px;
+}

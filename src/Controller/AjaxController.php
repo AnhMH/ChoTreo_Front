@@ -34,9 +34,16 @@ class AjaxController extends AppController {
     }
     
     /**
-     * Remove cart
+     * Update cart
      */
     public function updatecart() {
         include ('Bus/Ajax/updatecart.php');
+    }
+    
+    /**
+     * checkout
+     */
+    public function checkout() {
+        include ('Bus/Ajax/checkout.php');
     }
 }

@@ -62,7 +62,7 @@
             <a href="<?php echo $BASE_URL; ?>"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Tiếp tục mua hàng</a>
         </div>
         <div class="checkout-right-basket">
-            <a href="single.html">Xác nhận giỏ hàng</a>
+            <a href="<?php echo $BASE_URL; ?>/dat-hang">Xác nhận giỏ hàng</a>
         </div>
         <div class="clearfix"> </div>
     </div>

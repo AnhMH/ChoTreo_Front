@@ -61,6 +61,7 @@ class Api {
             if (empty($auth['User']['type']) || $auth['User']['type'] != 99) {
                 $posts['admin_id'] = !empty($auth['User']['id']) ? $auth['User']['id'] : '';
             }
+            $posts['from_front'] = 1;
             $posts['api_auth_date'] = strtotime(gmdate("M d Y H:i:s", strtotime(date('Y/m/d H:i:s'))));
             $posts['api_auth_key'] = hash('md5', Configure::read('API.secretKey') . $posts['api_auth_date']);
             $options = array(

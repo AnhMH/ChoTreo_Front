@@ -35,21 +35,31 @@ jQuery(document).ready(function () {
  * Init cart functions
  */
 function init_cart() {
-    $('.value-plus').on('click', function () {
-        var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) + 1;
-        divUpd.text(newVal);
-    });
-
-    $('.value-minus').on('click', function () {
-        var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) - 1;
-        if (newVal >= 1)
-            divUpd.text(newVal);
-    });
-
-    $('.close3').on('click', function (c) {
-        $('.rem3').fadeOut('slow', function (c) {
-            $('.rem3').remove();
-        });
+    $('#cartCheckoutForm').on('submit', function(event){
+        var loader = $('.loader');
+        var data = $( this ).serialize();
+        var $param = {
+            'type': 'POST',
+            'url': BASE_URL + '/ajax/checkout',
+            'data': data,
+            'beforeSend': function() {
+                loader.show();
+            },
+            'callback': function (data) {
+                var obj = JSON.parse(data);
+                if (obj.status == 'OK') {
+                    location.href = BASE_URL + '/dat-hang-thanh-cong';
+                } else {
+                    $('#errorModal .modal-body').html(obj.message);
+                    $('#errorModal').modal();
+                }
+            },
+            'complete': function() {
+                loader.hide();
+            }
+        };
+        cms_adapter_ajax($param);
+        event.preventDefault();
     });
 }
 
@@ -133,6 +143,22 @@ function updateCart($pId, $qty) {
         };
         cms_adapter_ajax($param);
     }
+    return false;
+}
+
+function showPassword() {
+    var check = $('#saveAccount').is(":checked");
+    if (check) {
+        $('.passContainer').show();
+        $('#password').attr('required', true);
+    } else {
+        $('.passContainer').hide();
+        $('#password').attr('required', false);
+    }
+}
+
+function cartCheckout() {
+    alert(1);
     return false;
 }
 

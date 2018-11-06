@@ -61,6 +61,8 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/dang-ky', ['controller' => 'Customers', 'action' => 'register']);
     $routes->connect('/dang-xuat', ['controller' => 'Customers', 'action' => 'logout']);
     $routes->connect('/gio-hang', ['controller' => 'Cart', 'action' => 'index']);
+    $routes->connect('/dat-hang', ['controller' => 'Cart', 'action' => 'checkout']);
+    $routes->connect('/dat-hang-thanh-cong', ['controller' => 'Cart', 'action' => 'complete']);
 
     /**
      * Connect catchall routes for all controllers.
