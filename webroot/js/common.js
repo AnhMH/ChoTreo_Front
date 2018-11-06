@@ -53,6 +53,22 @@ function init_cart() {
     });
 }
 
+function cartMinus($pId) {
+    var divUpd = $('#qty-' + $pId); 
+    var newVal = parseInt(divUpd.text(), 10) - 1;
+    if (newVal >= 1) {
+        divUpd.text(newVal);
+        updateCart($pId, newVal);
+    }
+}
+
+function cartPlus($pId) {
+    var divUpd = $('#qty-' + $pId); 
+    var newVal = parseInt(divUpd.text(), 10) + 1;
+    divUpd.text(newVal);
+    updateCart($pId, newVal);
+}
+
 function addToCart($pId, $qty) {
     if (typeof $pId == 'undefined') {
         $pId = false;
@@ -61,6 +77,7 @@ function addToCart($pId, $qty) {
         $qty = 1;
     }
     if ($pId) {
+        var loader = $('.loader');
         var $param = {
             'type': 'POST',
             'url': BASE_URL + '/ajax/addtocart',
@@ -70,8 +87,48 @@ function addToCart($pId, $qty) {
             },
             'callback': function (data) {
                 if (data > 0) {
+                    $('#cartMessage').modal();
                     $('#topCartNumber').show().html(data);
                 }
+            }
+        };
+        cms_adapter_ajax($param);
+    }
+    return false;
+}
+
+function updateCart($pId, $qty) {
+    if (typeof $pId == 'undefined') {
+        $pId = false;
+    }
+    if (typeof $qty == 'undefined') {
+        $qty = 0;
+    }
+    if ($pId) {
+        var loader = $('.loader');
+        var $param = {
+            'type': 'POST',
+            'url': BASE_URL + '/ajax/updatecart',
+            'data': {
+                'product_id': $pId,
+                'qty': $qty
+            },
+            'beforeSend': function () {
+                loader.show();
+            },
+            'callback': function (data) {
+                if (data != 'Error') {
+                    $('#cartContainer').html(data);
+                    var $cartTotal = parseInt($('#cartTotal').html());
+                    if ($cartTotal > 0) {
+                        $('#topCartNumber').show().html($cartTotal);
+                    } else {
+                        $('#topCartNumber').hide();
+                    }
+                }
+            },
+            'complete': function() {
+                loader.hide();
             }
         };
         cms_adapter_ajax($param);
@@ -87,6 +144,12 @@ function addToCart($pId, $qty) {
  * default type POST
  /*********************************************************************/
 function cms_adapter_ajax($param) {
+    if (typeof $param.complete == 'undefined') {
+        $param['complete'] = function(){};
+    }
+    if (typeof $param.beforeSend == 'undefined') {
+        $param['beforeSend'] = function(){};
+    }
     $.ajax({
         headers: {
             'X-CSRF-Token': _csrfToken
@@ -95,6 +158,8 @@ function cms_adapter_ajax($param) {
         type: $param.type,
         data: $param.data,
         async: true,
-        success: $param.callback
+        beforeSend: $param.beforeSend,
+        success: $param.callback,
+        complete: $param.complete
     });
 }

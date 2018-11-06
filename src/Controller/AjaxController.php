@@ -26,10 +26,17 @@ class AjaxController extends AppController {
     }
     
     /**
-     * Profit list
+     * Add to cart
      */
     public function addtocart() {
         $this->autoRender = false;
         include ('Bus/Ajax/addtocart.php');
+    }
+    
+    /**
+     * Remove cart
+     */
+    public function updatecart() {
+        include ('Bus/Ajax/updatecart.php');
     }
 }
