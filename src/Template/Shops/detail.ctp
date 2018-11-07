@@ -4,7 +4,7 @@
         <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
             <li><a href="<?php echo $BASE_URL; ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><?php echo __('LABEL_HOME');?></a></li>
             <li>Cửa hàng</li>
-            <li class="active"><?php echo $data['shop']['name']; ?></li>
+            <li class="active"><?php echo !empty($data['shop']['name']) ? $data['shop']['name'] : ''; ?></li>
         </ol>
     </div>
 </div>
@@ -14,10 +14,10 @@
         <div class="agileinfo_single">
             <?php if (!empty($data['shop'])): ?>
             <div class="col-md-4 agileinfo_single_left">
-                <img id="example" src="<?php echo $data['shop']['avatar']; ?>" alt="<?php echo $data['shop']['name']; ?>" width="300px" height="300px" class="img-responsive">
+                <img id="example" src="<?php echo !empty($data['shop']['avatar']) ? $data['shop']['avatar'] : ''; ?>" alt="<?php echo !empty($data['shop']['name']) ? $data['shop']['name'] : ''; ?>" width="300px" height="300px" class="img-responsive">
             </div>
             <div class="col-md-8 agileinfo_single_right">
-                <h2><?php echo $data['shop']['name']; ?></h2>
+                <h2><?php echo !empty($data['shop']['name']) ? $data['shop']['name'] : ''; ?></h2>
                 <div class="rating1">
                     <span class="starRating">
                         <input id="rating5" type="radio" name="rating" value="5">
@@ -33,7 +33,7 @@
                     </span>
                 </div>
                 <div class="w3agile_description">
-                    <h4>Số lượng sản phẩm: <?php echo count($data['products']);?></h4>
+                    <h4>Số lượng sản phẩm: <?php echo !empty($data['products']) ? count($data['products']) : 0;?></h4>
                 </div>
                 <div class="w3agile_description">
                     <h4>Ngày tham gia: -</h4>

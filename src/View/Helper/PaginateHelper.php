@@ -28,10 +28,10 @@ class PaginateHelper extends AppHelper {
      * @return string Paging html 
      */
     function render($total = 0, $limit = 0, $function = '', $sPage = 1, $displayPage = 10, $url = '') {
-        $page = !empty($this->request->query['page']) ? $this->request->query['page'] : $sPage;
+        $page = !empty($this->request->getQuery('page')) ? $this->request->getQuery('page') : $sPage;
         if (empty($url)) {
             $param = array();
-            foreach ($this->request->query as $name => $value) {
+            foreach ($this->request->getQuery() as $name => $value) {
                 if ($name != 'page') {
                     if (is_array($value)) {
                         foreach ($value as $item) {
@@ -43,7 +43,7 @@ class PaginateHelper extends AppHelper {
                 }
             }
             $homeUrl = Router::fullBaseUrl() . USE_SUB_DIRECTORY;
-            $url = $homeUrl.'/'. $this->request->url . '?';
+            $url = $homeUrl.'/'. $this->request->getPath() . '?';
             if (!empty($param)) {
                 $url = $url . implode('&', $param) . '&';
             }

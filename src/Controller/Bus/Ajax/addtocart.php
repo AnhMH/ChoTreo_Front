@@ -5,7 +5,7 @@ use Cake\Core\Configure;
 
 $session = $session = $this->getRequest()->getSession();
 $cart = array();
-$data = $this->request->data();
+$data = $this->request->getData();
 
 $sessionKey = Configure::read('Config.cartSessionKey');
 if ($session->check($sessionKey)) {

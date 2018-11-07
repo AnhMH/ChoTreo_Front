@@ -37,7 +37,7 @@ class Api {
             AppLog::info("START API: {$url}", __METHOD__, $requestData);
             $ch = curl_init();
             $headers = array("Content-Type:multipart/form-data");
-            $session = Router::getRequest(true)->session();
+            $session = Router::getRequest(true)->getSession();
             $auth = $session->read('Auth');
             if (!isset($requestData['unauthorize'])) {
                 if (!empty($auth['User']['token'])) {

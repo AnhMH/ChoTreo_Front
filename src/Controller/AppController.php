@@ -100,8 +100,8 @@ class AppController extends Controller
         }
         parent::beforeFilter($event);
         
-        $this->controller = strtolower($this->request->params['controller']);
-        $this->action = strtolower($this->request->params['action']);
+        $this->controller = strtolower($this->request->getParam('controller'));
+        $this->action = strtolower($this->request->getParam('action'));
         $this->current_url = Router::url($this->here, true);
         $this->BASE_URL = Router::fullBaseUrl();
         
@@ -135,7 +135,7 @@ class AppController extends Controller
         $this->set('current_url', $this->current_url);
         $this->set('BASE_URL', $this->BASE_URL);
         $this->set('BASE_URL_FRONT', $this->BASE_URL_FRONT);
-        $this->set('url', $this->request->url);
+        $this->set('url', $this->request->getPath());
         $this->set('referer', Controller::referer());
         $this->set('vipType', $this->vipType);
 
@@ -172,7 +172,7 @@ class AppController extends Controller
      * @return array
      */
     public function getParams($default = array()) {
-        $params = $this->request->query;
+        $params = $this->request->getQuery();
         if (!empty($default)) {
             foreach ($default as $paramName => $paramValue) {
                 if (!isset($params[$paramName])) {
@@ -188,11 +188,11 @@ class AppController extends Controller
      */
     public function setLayout() {
         if ($this->controller == 'login' || $this->controller == 'infos') {
-            $this->viewBuilder()->layout('empty');
+            $this->viewBuilder()->setLayout('empty');
         } else if ($this->controller == 'ajax') {
-            $this->viewBuilder()->layout('ajax');
+            $this->viewBuilder()->setLayout('ajax');
         } else {
-            $this->viewBuilder()->layout('chotreo');
+            $this->viewBuilder()->setLayout('chotreo');
         }
     }
     
