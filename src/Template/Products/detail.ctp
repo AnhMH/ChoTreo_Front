@@ -52,6 +52,7 @@
                     </div>
                 </div>
             </div>
+            <div class="clearfix"></div>
             <div class="col-md-12 product-description">
                 <h4>Mô tả chi tiết</h4>
                 <?php echo $data['product']['detail']; ?>
