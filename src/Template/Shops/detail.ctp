@@ -38,6 +38,10 @@
                 <div class="w3agile_description">
                     <h4>Ngày tham gia: -</h4>
                 </div>
+                <div class="w3agile_description">
+                    <h4>Mô tả:</h4>
+                    <p><?php echo $data['shop']['description']; ?></p>
+                </div>
             </div>
             <?php endif; ?>
             <div class="clearfix"> </div>

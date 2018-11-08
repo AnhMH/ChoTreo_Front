@@ -17,7 +17,7 @@
                 <img id="example" src="<?php echo $data['product']['image']; ?>" alt="<?php echo $data['product']['name']; ?>" width="300px" height="300px" class="img-responsive">
             </div>
             <div class="col-md-8 agileinfo_single_right">
-                <h2><?php echo $data['product']['name']; ?></h2>
+                <h2><?php echo $data['product']['name']; ?> <span>(<?php echo $data['product']['code']; ?>)</span></h2>
                 <div class="rating1">
                     <span class="starRating">
                         <input id="rating5" type="radio" name="rating" value="5">
@@ -33,19 +33,20 @@
                     </span>
                 </div>
                 <div class="w3agile_description">
-                    <h4>Mã sản phẩm: <?php echo $data['product']['code']; ?></h4>
+                    <h5>Danh mục: <a href="<?php echo $BASE_URL;?>/danh-muc/<?php echo $data['product']['cate_url'];?>"><?php echo $data['product']['cate_name']; ?></a></h5>
                 </div>
                 <div class="w3agile_description">
-                    <h4>Danh mục: <?php echo $data['product']['cate_name']; ?></h4>
+                    <h5>Cửa hàng: <a href="<?php echo $BASE_URL;?>/cua-hang/<?php echo $data['product']['admin_url'];?>"><?php echo $data['product']['admin_name']; ?></a></h5>
                 </div>
                 <div class="w3agile_description">
-                    <h4>Cửa hàng: <?php echo $data['product']['admin_name']; ?></h4>
+                    <h4>Mô tả:</h4>
+                    <p><?php echo $data['product']['description'];?></p>
                 </div>
                 <div class="snipcart-item block">
                     <div class="snipcart-thumb agileinfo_single_right_snipcart">
-                        <h4 class="m-sing"><?php echo number_format($data['product']['sell_price']); ?></h4>
+                        <h4 class="m-sing"><?php echo number_format($data['product']['sell_price']); ?></h4> (VND)
                     </div>
-                    <input type="number" id="inputCartNumber" value="1" min="1"/>
+                    <!--<input type="number" id="inputCartNumber" value="1" min="1"/>-->
                     <div class="snipcart-details agileinfo_single_right_details">
                         <button class="button" onclick="return addToCart(<?php echo $data['product']['id'];?>, document.getElementById('inputCartNumber').value)">Thêm vào giỏ hàng</button>
                     </div>
@@ -53,7 +54,7 @@
             </div>
             <div class="col-md-12 product-description">
                 <h4>Mô tả chi tiết</h4>
-                <?php echo $data['product']['description']; ?>
+                <?php echo $data['product']['detail']; ?>
             </div>
             <?php endif; ?>
             

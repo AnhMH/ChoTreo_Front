@@ -1290,11 +1290,14 @@ ul.faq {
 /*-- //faq-page --*/
 /*-- single --*/
 .agileinfo_single h2{
-	font-size: 1.8em;
+    font-size: 1.8em;
     color: #212121;
     line-height: 1.5em;
     text-transform: uppercase;
     margin-bottom: 1em;
+}
+.agileinfo_single h2 span {
+    font-size: 16px;
 }
 .agileinfo_single_left {
     padding: 2em;
@@ -2343,6 +2346,9 @@ a.callbacks1_s3.active,a.callbacks1_s3:focus{
 }
 h4.m-sing {
     text-align: left;
+    font-size: 25px;
+    color: #fe9126;
+    font-weight: bold;
 }
 h3.icon-subheading {
     font-size: 28px;
