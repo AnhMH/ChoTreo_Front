@@ -33,8 +33,8 @@
                             <p class="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
                         </div>
                         <div class="agile_top_brands_grids">
-                            <?php if (!empty($data['products'])): ?>
-                                <?php foreach ($data['products'] as $p): ?>
+                            <?php if (!empty($data['feature_products'])): ?>
+                                <?php foreach ($data['feature_products'] as $p): ?>
                                     <div class="col-md-4 top_brand_left" style="margin-bottom:40px;">
                                         <?php echo $this->element('product_list', array('p' => $p)); ?>
                                     </div>
@@ -270,8 +270,8 @@
     <div class="container">
         <h3>Sản phẩm mới</h3>
         <div class="agile_top_brands_grids">
-            <?php if (!empty($data['products'])): ?>
-                <?php foreach ($data['products'] as $p): ?>
+            <?php if (!empty($data['new_products'])): ?>
+                <?php foreach ($data['new_products'] as $p): ?>
                 <div class="col-md-3 top_brand_left-1">
                     <?php echo $this->element('product_list', array('p' => $p)); ?>
                 </div>
