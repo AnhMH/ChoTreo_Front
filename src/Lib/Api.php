@@ -58,6 +58,7 @@ class Api {
                 }
             }
             $posts['from_front'] = 1;
+            $posts['vip_type'] = 0;
             $posts['api_auth_date'] = strtotime(gmdate("M d Y H:i:s", strtotime(date('Y/m/d H:i:s'))));
             $posts['api_auth_key'] = hash('md5', Configure::read('API.secretKey') . $posts['api_auth_date']);
             $options = array(

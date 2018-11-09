@@ -33,10 +33,10 @@
                     </span>
                 </div>
                 <div class="w3agile_description">
-                    <h4>Số lượng sản phẩm: <?php echo !empty($data['products']) ? count($data['products']) : 0;?></h4>
+                    <h4>Số lượng sản phẩm: <?php echo $total;?></h4>
                 </div>
                 <div class="w3agile_description">
-                    <h4>Ngày tham gia: -</h4>
+                    <h4>Ngày tham gia: <?php echo !empty($data['shop']['created']) ? date('d-m-Y', $data['shop']['created']) : '-';?></h4>
                 </div>
                 <div class="w3agile_description">
                     <h4>Mô tả:</h4>
@@ -53,8 +53,8 @@
     <div class="container">
         <h3>Sản phẩm</h3>
         <div class="agile_top_brands_grids">
-            <?php if (!empty($data['products'])): ?>
-            <?php foreach ($data['products'] as $p): ?>
+            <?php if (!empty($data['products']['data'])): ?>
+            <?php foreach ($data['products']['data'] as $p): ?>
             <div class="col-md-3 top_brand_left-1">
                 <?php echo $this->element('product_list', array('p' => $p)); ?>
             </div>
@@ -62,6 +62,7 @@
             <?php endif; ?>
             <div class="clearfix"> </div>
         </div>
+        <?php echo $this->Paginate->render($total, $limit); ?>
     </div>
 </div>
 <!-- //new -->
