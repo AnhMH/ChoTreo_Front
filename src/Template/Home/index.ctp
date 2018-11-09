@@ -30,7 +30,7 @@
                     <div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
                         <div class="agile-tp">
                             <h5>Sản phẩm nổi bật trong tuần</h5>
-                            <p class="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
+                            <p class="w3l-ad"></p>
                         </div>
                         <div class="agile_top_brands_grids">
                             <?php if (!empty($data['feature_products'])): ?>
@@ -45,8 +45,8 @@
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="tours" aria-labelledby="tours-tab">
                         <div class="agile-tp">
-                            <h5>This week</h5>
-                            <p class="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
+                            <h5>Cửa hàng nổi bật</h5>
+                            <p class="w3l-ad"></p>
                         </div>
                         <div class="agile_top_brands_grids">
                             <?php if (!empty($data['shops'])): ?>
