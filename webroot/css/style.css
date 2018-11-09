@@ -2407,6 +2407,111 @@ h3.agileits-icons-title {
     text-align: center;
     word-wrap: break-word;
 }
+
+.product-description {
+    padding: 2em;
+    margin-top: 40px;
+    box-shadow: 0px 0px 5px #b2afaf;
+}
+.product-description > h4 {
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 40px;
+}
+.message {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+}
+.message.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.message.error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgb(0, 0, 0, 0.9);
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.loader span {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #212121;
+    border-right: 10px solid #3399cc;
+    border-bottom: 10px solid #fe9126;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 1.5s linear infinite; /* Safari */
+    animation: spin 1.5s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -30px;
+    margin-left: -30px;
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#cartCheckoutForm label {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+#cartCheckoutForm input.form-control {
+    padding: 20px;
+}
+.cartCheckoutFormSubmit {
+    padding: 10px 30px;
+    font-size: 20px;
+}
+.coupon-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.coupon_image {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    background: #fff;
+}
+.coupon_image img {
+    height: 100%;
+    margin: 0 auto;
+}
+.coupon_name a{
+    height: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.view_all {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.nav-coupon {
+    background: #333;
+}
+
 @media (max-width:991px){
 	h3.agileits-icons-title {
 		font-size: 28px;
@@ -2761,6 +2866,15 @@ ul.faq {
     border: none;
     text-align: center;
 }
+.coupon_name a{
+    height: auto;
+    overflow: visible;
+    white-space: unset;
+    text-overflow: unset;
+}
+.nav-coupon {
+    background: inherit;
+}
 }
 @media (max-width: 736px){
 #PPMiniCart {
@@ -2777,9 +2891,6 @@ ul.faq {
 }
 .logo_products {
     padding: 1.5em 0;
-}
-.skdslider {
-    height: 281px;
 }
 .snipcart-details {
     width: 100%;
@@ -3411,78 +3522,4 @@ td.invert-image a img {
 .w3agile_description p {
     font-size: 13px;
 }
-}
-.product-description {
-    padding: 2em;
-    margin-top: 40px;
-    box-shadow: 0px 0px 5px #b2afaf;
-}
-.product-description > h4 {
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 40px;
-}
-.message {
-    padding: 15px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    text-align: center;
-}
-.message.success {
-    color: #3c763d;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-}
-.message.error {
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
-}
-.loader {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: rgb(0, 0, 0, 0.9);
-    z-index: 999;
-    top: 0;
-    left: 0;
-    display: none;
-}
-.loader span {
-    border: 10px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 10px solid #212121;
-    border-right: 10px solid #3399cc;
-    border-bottom: 10px solid #fe9126;
-    width: 60px;
-    height: 60px;
-    -webkit-animation: spin 1.5s linear infinite; /* Safari */
-    animation: spin 1.5s linear infinite;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -30px;
-    margin-left: -30px;
-}
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-#cartCheckoutForm label {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-#cartCheckoutForm input.form-control {
-    padding: 20px;
-}
-.cartCheckoutFormSubmit {
-    padding: 10px 30px;
-    font-size: 20px;
 }

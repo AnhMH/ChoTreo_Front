@@ -64,6 +64,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/dat-hang', ['controller' => 'Cart', 'action' => 'checkout']);
     $routes->connect('/dat-hang-thanh-cong', ['controller' => 'Cart', 'action' => 'complete']);
     $routes->connect('/cua-hang/*', ['controller' => 'Shops', 'action' => 'detail']);
+    $routes->connect('/hang-khuyen-mai/', ['controller' => 'Coupons', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.

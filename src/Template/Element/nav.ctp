@@ -19,6 +19,7 @@
                     <li><a href="<?php echo $BASE_URL.'/danh-muc/'.$val['url'];?>"><?php echo $val['name']; ?></a></li>
                     <?php endforeach; ?>
                     <?php endif; ?>
+                    <li class="nav-coupon"><a href="<?php echo $BASE_URL;?>/hang-khuyen-mai" class="act">Khuyến mãi</a></li>
                 </ul>
             </div>
         </nav>

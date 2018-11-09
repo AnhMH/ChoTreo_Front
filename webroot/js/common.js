@@ -31,6 +31,16 @@ jQuery(document).ready(function () {
     init_cart();
 });
 
+//$(window).load(function(){
+//   // PAGE IS FULLY LOADED  
+//   // FADE OUT YOUR OVERLAYING DIV
+//   $('.loader').fadeOut();
+//});
+
+function hide_preloader() {
+    $('.loader').fadeOut();
+}
+
 /*
  * Init cart functions
  */
