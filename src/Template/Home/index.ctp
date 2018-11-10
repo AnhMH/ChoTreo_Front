@@ -3,13 +3,15 @@
 <ul id="demo1">
     <?php foreach ($data['sliders'] as $s): ?>
     <?php if ($s['type'] == 1): ?>
-    <li>
-        <img src="<?php echo $s['image']; ?>" alt="<?php echo $s['text']; ?>" />
-        <!--Slider Description example-->
-        <div class="slide-desc">
-            <h3><?php echo $s['text']; ?></h3>
-        </div>
-    </li>
+    <a href="<?php echo $s['link'];?>">
+        <li>
+            <img src="<?php echo $s['image']; ?>" alt="<?php echo $s['text']; ?>" />
+            <!--Slider Description example-->
+            <div class="slide-desc">
+                <h3><?php echo $s['text']; ?></h3>
+            </div>
+        </li>
+    </a>
     <?php endif; ?>
     <?php endforeach; ?>
 </ul>
@@ -96,7 +98,7 @@
 <!-- //top-brands -->
 <!-- Carousel
    ================================================== -->
-<?php if (!empty($data['sliders'])): $si = 0;?>
+<?php if (!empty($data['sliders']) && 1==2): $si = 0;?>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -125,20 +127,17 @@
     <div class="container">
         <div class="col-md-6 ban-bottom3">
             <div class="ban-top">
-                <img src="images/p2.jpg" class="img-responsive" alt=""/>
-
+                <a href="<?php echo $BASE_URL;?>/me-va-be"><img src="<?php echo $BASE_URL;?>/img/me-va-be.png" class="img-responsive" alt="Mẹ và bé - chotreo.com"/></a>
             </div>
             <div class="ban-img">
                 <div class=" ban-bottom1">
                     <div class="ban-top">
-                        <img src="images/p3.jpg" class="img-responsive" alt=""/>
-
+                        <a href="<?php echo $BASE_URL;?>/thoi-trang"><img src="<?php echo $BASE_URL;?>/img/thoi-trang.png" class="img-responsive" alt="Thời trang - chotreo.com"/></a>
                     </div>
                 </div>
                 <div class="ban-bottom2">
                     <div class="ban-top">
-                        <img src="images/p4.jpg" class="img-responsive" alt=""/>
-
+                        <a href="<?php echo $BASE_URL;?>/my-pham"><img src="<?php echo $BASE_URL;?>/img/my-pham.png" class="img-responsive" alt="Mỹ phẩm - chotreo.com"/></a>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -146,12 +145,9 @@
         </div>
         <div class="col-md-6 ban-bottom">
             <div class="ban-top">
-                <img src="images/111.jpg" class="img-responsive" alt=""/>
-
-
+                <a href="<?php echo $BASE_URL;?>/khuyen-mai"><img src="<?php echo $BASE_URL;?>/img/khuyen-mai.png" class="img-responsive" alt="Khuyến mãi - chotreo.com" style="border: 1px solid #ccc;"/></a>
             </div>
         </div>
-
         <div class="clearfix"></div>
     </div>
 </div>

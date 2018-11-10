@@ -10,6 +10,7 @@
         <link href="<?php echo $BASE_URL; ?>/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $BASE_URL; ?>/css/skdslider.css" rel="stylesheet">
         <link href="<?php echo $BASE_URL; ?>/css/style.css?<?php echo VERSION_DATE; ?>" rel="stylesheet" type="text/css" media="all" />
+        <link href="<?php echo $BASE_URL; ?>/css/responsive.css?<?php echo VERSION_DATE; ?>" rel="stylesheet" type="text/css" media="all" />
         <!-- font-awesome icons -->
         <link href="<?php echo $BASE_URL; ?>/css/font-awesome.css" rel="stylesheet"> 
         <!-- //font-awesome icons -->
