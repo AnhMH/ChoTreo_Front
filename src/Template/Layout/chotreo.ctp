@@ -5,7 +5,7 @@ $webKeyword = 'mua bán online, phần mềm quản lý, phần mềm quản lý
 $webImage = $BASE_URL.'/img/chotreo.png';
 $_description = !empty($pageDescription) ? strip_tags($pageDescription) : $webDescription;
 $_keyword = !empty($pageKeyword) ? $pageKeyword : $webKeyword;
-$_title = !empty($pageTitle) ? $pageTitle : $webTitle;
+$_title = !empty($pageTitle) ? $pageTitle.' - ChoTreo.Com' : $webTitle;
 $_image = !empty($pageImage) ? $pageImage : $webImage;
 ?>
 <!DOCTYPE html>
