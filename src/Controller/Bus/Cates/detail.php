@@ -6,6 +6,10 @@ $data = array();
 $limit = Configure::read('Config.PageSize');
 $sortBy = Configure::read('Config.sortBy');
 $limitData = Configure::read('Config.searchPageSize');
+$pageImage = '';
+$pageTitle = '';
+$pageDescription = '';
+$pageKeyword = '';
 $param = $this->getParams(array(
     'limit' => $limit,
     'disable' => 0
@@ -17,6 +21,9 @@ if (!empty($url)) {
 $total = !empty($data['products']['total']) ? $data['products']['total'] : 0;
 $products = !empty($data['products']['data']) ? $data['products']['data'] : array();
 $cate = !empty($data['cate']) ? $data['cate'] : array();
+$pageImage = !empty($cate['image']) ? $cate['image'] : '';
+$pageTitle = !empty($cate['name']) ? $cate['name'] : '';
+$pageDescription = !empty($cate['description']) ? $cate['description'] : '';
 unset($param['disable']);
 unset($param['url']);
 $this->set(compact(
@@ -28,5 +35,8 @@ $this->set(compact(
         'sortBy',
         'limitData',
         'param',
-        'url'
+        'url',
+        'pageTitle',
+        'pageName',
+        'pageDescription'
     ));

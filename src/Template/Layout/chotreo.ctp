@@ -1,11 +1,44 @@
+<?php
+$webTitle = 'ChoTreo.Com';
+$webDescription = 'Phần mềm quản lý bán hàng online miễn phí';
+$webKeyword = 'mua bán online, phần mềm quản lý, phần mềm quản lý bán hàng online, chotreo, chợ tréo';
+$webImage = $BASE_URL.'/img/chotreo.png';
+$_description = !empty($pageDescription) ? strip_tags($pageDescription) : $webDescription;
+$_keyword = !empty($pageKeyword) ? $pageKeyword : $webKeyword;
+$_title = !empty($pageTitle) ? $pageTitle : $webTitle;
+$_image = !empty($pageImage) ? $pageImage : $webImage;
+?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title><?php echo $_title;?></title>
         <!-- for-mobile-apps -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="" />
+        
+        <meta name="description" itemprop="description" content="<?php echo $_description; ?>" />
+        <meta name="keywords" content="<?php echo $_keyword; ?>">
+        
+        <meta property="og:title" content="<?php echo $_title; ?>" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="<?php echo $current_url;?>" />
+        <meta property="og:image" content="<?php echo $_image; ?>" />
+        <meta property="og:site_name" content="<?php echo $webTitle; ?>" />
+        <meta property="og:description" content="<?php echo $_description; ?>" />
+       
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="<?php echo $_title; ?>" />
+        <meta name="twitter:description" content="<?php echo $_description; ?>" />
+        <meta name="twitter:image" content="<?php echo $_image; ?>" />
+        <meta itemprop="image" content="<?php echo $_image; ?>" />
+
+        <meta name="generator" content="ChoTreo.Com" />
+        
+        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+        <link rel='dns-prefetch' href='//s.w.org' />
+        
+        <link rel="canonical" href="<?php echo $current_url;?>" />
         
         <link href="<?php echo $BASE_URL; ?>/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
         <link href="<?php echo $BASE_URL; ?>/css/skdslider.css" rel="stylesheet">
