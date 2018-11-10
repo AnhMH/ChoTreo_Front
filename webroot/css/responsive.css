@@ -353,7 +353,7 @@ ul.faq {
     border: none;
     text-align: center;
 }
-.coupon_name a{
+.coupon_name a, .productListName{
     height: auto;
     overflow: visible;
     white-space: unset;

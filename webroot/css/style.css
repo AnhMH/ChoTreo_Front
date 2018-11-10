@@ -2497,11 +2497,17 @@ h3.agileits-icons-title {
     height: 100%;
     margin: 0 auto;
 }
-.coupon_name a{
+.coupon_name a, .productListName{
     height: 60px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+.productListName {
+    height: 21px;
+}
+.top_brand_left, .top_brand_left-1 {
+    margin-bottom: 20px;
 }
 .view_all {
     width: 100%;
