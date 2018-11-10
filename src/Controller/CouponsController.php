@@ -17,4 +17,8 @@ class CouponsController extends AppController
     public function index() {
         include ('Bus/Coupons/index.php');
     }
+    
+    public function detail($id = '') {
+        include ('Bus/Coupons/detail.php');
+    }
 }
