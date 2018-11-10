@@ -1413,14 +1413,14 @@ ul.faq {
     margin-right: 2em;
     width: 25%;
 }
-select#sortBy,select#limitData {
+select#sortBy,select#limitData,select#merchant {
     border: 1px solid #212121;
     outline: none;
     font-size: 14px;
     color: #212121;
     padding: 0.5em;
     width: 100%;
-	cursor: pointer;
+    cursor: pointer;
 }
 .products-right-grids{
 	margin-bottom: 2em;

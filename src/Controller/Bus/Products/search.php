@@ -15,6 +15,7 @@ if (!empty($param['keyword'])) {
 }
 $total = !empty($data['total']) ? $data['total'] : 0;
 $products = !empty($data['data']) ? $data['data'] : array();
+$limit = $param['limit'];
 unset($param['disable']);
 $this->set(compact(
         'data',

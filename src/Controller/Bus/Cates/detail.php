@@ -24,6 +24,7 @@ $cate = !empty($data['cate']) ? $data['cate'] : array();
 $pageImage = !empty($cate['image']) ? $cate['image'] : '';
 $pageTitle = !empty($cate['name']) ? $cate['name'] : '';
 $pageDescription = !empty($cate['description']) ? $cate['description'] : '';
+$limit = $param['limit'];
 unset($param['disable']);
 unset($param['url']);
 $this->set(compact(

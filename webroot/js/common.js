@@ -22,6 +22,11 @@ jQuery(document).ready(function () {
         var url = $('#sortByParam').val();
         location.href = url + '&sort=' + val;
     });
+    $('#merchant').on('change', function () {
+        var val = $(this).val();
+        var url = $('#merchantParam').val();
+        location.href = url + '&merchant=' + val;
+    });
     $('#limitData').on('change', function () {
         var val = $(this).val();
         var url = $('#limiDataParam').val();
