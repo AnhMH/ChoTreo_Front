@@ -2532,6 +2532,7 @@ h3.agileits-icons-title {
 }
 #home-index .top-atvn-products, 
 #products-detail .top-atvn-products, 
-#shops-detail .top-atvn-products {
+#shops-detail .top-atvn-products,
+#coupons-detail .top-atvn-products{
     background: #fff;
 }
