@@ -53,7 +53,7 @@ $_image = !empty($pageImage) ? $pageImage : $webImage;
         <script src="<?php echo $BASE_URL; ?>/js/common.js?<?php echo VERSION_DATE; ?>"></script>
     </head>
 
-    <body onload="hide_preloader()">
+    <body onload="hide_preloader()" id="<?php echo $controller.'-'.$action;?>">
         <?php echo $this->element('header'); ?>
         <?php echo $this->element('nav'); ?>
         <?= $this->fetch('content') ?>

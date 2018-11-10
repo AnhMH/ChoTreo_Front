@@ -17,7 +17,13 @@
 </ul>
 <?php endif; ?>
 <!-- //main-slider -->
-<!-- //top-header and slider -->
+
+<?php if (!empty($settings['atvn_top_products'])): ?>
+<!-- new -->
+    <?php echo $this->element('atvn_product_list'); ?>
+<!-- //new -->
+<?php endif; ?>
+
 <!-- top-brands -->
 <div class="top-brands">
     <div class="container">

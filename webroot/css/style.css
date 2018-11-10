@@ -2530,3 +2530,8 @@ h3.agileits-icons-title {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#home-index .top-atvn-products, 
+#products-detail .top-atvn-products, 
+#shops-detail .top-atvn-products {
+    background: #fff;
+}

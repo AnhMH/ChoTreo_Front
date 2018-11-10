@@ -1,3 +1,8 @@
+<?php if (!empty($settings['atvn_top_products']) && $controller != 'home'): ?>
+<!-- new -->
+    <?php echo $this->element('atvn_product_list'); ?>
+<!-- //new -->
+<?php endif; ?>
 <div class="footer">
     <div class="container">
         <div class="w3_footer_grids">
