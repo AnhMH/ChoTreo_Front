@@ -7,7 +7,7 @@ use Cake\Core\Configure;
 
 if ($this->request->is('post')) {
     // Trim data
-    $data = $this->request->data();
+    $data = $this->request->getData();
     foreach ($data as $key => $value) {
         $data[$key] = trim($value);
     }
