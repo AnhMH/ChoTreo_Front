@@ -20,6 +20,8 @@
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL;?>/lien-he">Liên hệ</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="https://app.chotreo.com/login">Bán hàng cùng ChoTreo</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL;?>/hang-khuyen-mai">Săn hàng khuyến mãi</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL;?>/chinh-sach-bao-mat">Chính sách bảo mật</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="<?php echo $BASE_URL;?>/dieu-khoan-dich-vu">Điều khoản dịch vụ</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="https://hoanganhonline.com">Liên hệ làm web</a></li>
                 </ul>
             </div>

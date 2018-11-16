@@ -37,4 +37,12 @@ class HomeController extends AppController
     public function index() {
         include ('Bus/Home/index.php');
     }
+    
+    public function policy() {
+        
+    }
+    
+    public function policy2() {
+        
+    }
 }
