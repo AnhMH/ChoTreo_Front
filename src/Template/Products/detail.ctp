@@ -46,7 +46,7 @@
                     <div class="snipcart-thumb agileinfo_single_right_snipcart">
                         <h4 class="m-sing"><?php echo number_format($data['product']['sell_price']); ?></h4> (VND)
                     </div>
-                    <!--<input type="number" id="inputCartNumber" value="1" min="1"/>-->
+                    <input type="hidden" id="inputCartNumber" value="1" min="1"/>
                     <div class="snipcart-details agileinfo_single_right_details">
                         <button class="button" onclick="return addToCart(<?php echo $data['product']['id'];?>, document.getElementById('inputCartNumber').value)">Thêm vào giỏ hàng</button>
                     </div>
